@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+# 🤖 AbhiGPT – ChatGPT Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern **ChatGPT clone** built using **React.js** and **Node.js**, featuring real-time chat, conversation history, and a clean UI with authentication modals.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- 💬 Real-time AI chat interface
+- 🧠 Conversation history with multiple chats
+- 📂 Sidebar chat management
+- ⚡ Fast API communication (Node backend)
+- 🔐 Login & Signup UI (modal-based)
+- 🔔 Toast notifications
+- 📱 Responsive and smooth scrolling UI
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend
+- React.js (Hooks)
+- CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
+- Node.js
+- Express.js
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Project Structure
 
-### `npm run build`
+project-root/
+│
+├── server.js # Backend server
+├── package.json
+├── package-lock.json
+│
+├── src/
+│ ├── App.js # Main React component
+│ ├── index.js
+│ ├── index.css
+│
+└── README.md
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ How It Works
 
-### `npm run eject`
+- User enters a prompt
+- Request is sent to backend (`/completions`)
+- Backend processes AI response
+- Chat history is stored in state
+- Conversations are grouped by titles
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🔧 Installation & Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/your-username/abhigpt.git
+cd abhigpt
+2️⃣ Install Dependencies
+npm install
+3️⃣ Start Backend Server
+node server.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Server runs on:
 
-## Learn More
+http://localhost:8000
+4️⃣ Start Frontend
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+App runs on:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+http://localhost:3000
+🔌 API Endpoint
+POST /completions
 
-### Code Splitting
+Request Body:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+{
+  "message": "Hello",
+  "history": []
+}
 
-### Analyzing the Bundle Size
+Response:
+AI generated text response
+🎯 Key Functionalities
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🆕 New Chat
+Clears current conversation
+Starts fresh thread
 
-### Making a Progressive Web App
+📜 Chat History
+Stored in state
+Grouped by unique titles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🔄 Switching Chats
+Click previous chat from sidebar
 
-### Advanced Configuration
+🔐 Authentication UI
+Login / Signup modals
+Toast notifications for success
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+🎨 UI Highlights
+Smooth auto-scroll to latest message
+Disabled input while waiting for response
+Clean and minimal layout
+Sidebar navigation like ChatGPT
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Limitations
+No real authentication (UI only)
+Chat history not persisted (state only)
+No database integration
 
-### `npm run build` fails to minify
+✨ Future Improvements
+🔐 Add real authentication (JWT)
+🗄️ Store chats in database (MongoDB)
+🌍 Deploy to cloud (Vercel + Render)
+🎙️ Voice input support
+🌙 Dark mode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🤝 Contributing
+
+Feel free to fork and improve!
+
+1) Fork repo
+2) Create branch
+3) Make changes
+4) Submit PR
+
+👨‍💻 Author
+
+Abhi
+
+GitHub: https://github.com/Abhikarle
